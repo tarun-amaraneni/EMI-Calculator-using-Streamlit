@@ -1,6 +1,78 @@
 # EMI Calculator using Streamlit
 
-A web application to calculate Equated Monthly Installment (EMI) using Python Streamlit. This project follows Test-Driven Development (TDD) principles and includes comprehensive unit tests.
+A web-based EMI (Equated Monthly Installment) calculator built with Python and Streamlit.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Python 3.9 or later
+- pip3 (Python package installer)
+
+### Installing pip3
+
+If you don't have pip3 installed, follow these steps:
+
+1. For macOS:
+   ```bash
+   # Install pip3 using curl
+   curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+   python3 get-pip.py
+   ```
+
+2. For Linux:
+   ```bash
+   sudo apt update
+   sudo apt install python3-pip
+   ```
+
+3. For Windows:
+   - Download Python from [python.org](https://www.python.org/downloads/)
+   - During installation, make sure to check "Add Python to PATH"
+   - pip3 will be installed automatically with Python
+
+### Installing Streamlit
+
+After installing pip3, install Streamlit using:
+
+```bash
+# Install Streamlit
+python3 -m pip install --user streamlit
+
+# If you get a "command not found" error after installation, add this to your PATH:
+# For macOS/Linux, add to ~/.zshrc or ~/.bashrc:
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+# Then reload your shell:
+source ~/.zshrc  # or source ~/.bashrc
+```
+
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd emi-calculator
+   ```
+
+2. Install dependencies:
+   ```bash
+   python3 -m pip install --user -r requirements.txt
+   ```
+
+3. Run the application:
+   ```bash
+   python3 -m streamlit run app.py
+   ```
+
+## Features (Planned)
+- EMI calculation with principal, interest rate, and tenure
+- Interactive web interface using Streamlit
+- Input validation and error handling
+- Detailed payment schedule
+
+## Project Status
+🚧 Under Development
+
+This project is currently under development following Test-Driven Development (TDD) methodology.
 
 ## Features
 
@@ -20,41 +92,12 @@ A web application to calculate Equated Monthly Installment (EMI) using Python St
 - Error handling and user feedback
 - Input validation with min/max bounds
 
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/tarun-amaraneni/EMI-Calculator-using-Streamlit.git
-cd EMI-Calculator-using-Streamlit
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-1. Run the Streamlit application:
-```bash
-streamlit run app.py
-```
-
-2. Open your web browser and navigate to the URL shown in the terminal (usually http://localhost:8501)
-
-3. Enter your loan details:
-   - Principal amount (must be non-negative)
-   - Annual interest rate (between 0% and 100%)
-   - Loan tenure (minimum 0.1 years)
-   
-4. Click "Calculate EMI" to see the results
-
 ## Development
 
 This project follows Test-Driven Development (TDD) principles. To run the tests:
 
 ```bash
-python -m pytest tests/ -v
+python3 -m pytest tests/ -v
 ```
 
 ## Project Structure
@@ -68,6 +111,3 @@ EMI-Calculator-using-Streamlit/
 └── requirements.txt       # Project dependencies
 ```
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
