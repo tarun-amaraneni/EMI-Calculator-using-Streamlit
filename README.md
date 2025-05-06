@@ -50,7 +50,7 @@ source ~/.zshrc  # or source ~/.bashrc
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd emi-calculator
+   cd EMI-Calculator-using-Streamlit
    ```
 
 2. Install dependencies:
